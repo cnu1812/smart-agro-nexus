@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Agro Nexus</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="pimg1">
+        <div class="header">
+            <div class="container-block1">
+                <div class="container">
+            <span class="logo">Smart Agro Nexus</span>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('crop_recommend')}}">Crop</a></li>
+                    <li><a href="{{ url_for('fertilizer_recommendation') }}">Fertilizer</a></li>
+                    <li><a href="{{ url_for('disease_prediction') }}">Disease</a></li>
+                    <li><a href="{{ url_for('BlockRegistration') }}">Registration</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+                
+                <div class="container-block2">
+                    <p class="text">Connecting Farmers <br>with Consumers for a <br>Sustainable Future</p>
+                    <!-- <button class="cn"><a href="#">Explore Now</a></button>  -->
+                </div>
+            </div>
+    </div>
+    <div class="wrapper">
+        <div class="row">
+                <div class="image-section">
+                    <img src="../static/css/crop.jpg">
+                </div>
+                <div class="content">
+                    <span>Expert Crop Recommendations for Optimal Yield </span>
+                    <p>Our team of agricultural experts uses advanced technology to provide personalized crop recommendations, ensuring your farm's productivity reaches its full potential. </p>
+                    <div class="button">
+                        <a href="{{ url_for('crop_recommend') }}">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper" style="min-height:70vh;">
+        <div class="row">
+            <div class="image-section1">
+                <img src="../static/css/ferti.jpg">
+            </div>
+            <div class="content1">
+                <span>Innovative Fertilizer Solutions for Healthier Soil </span>
+                <p>Unlock the potential of your soil with our scientifically-backed fertilizer recommendations tailored to your farm's specific needs.</p>       
+                <div class="button">
+                    <a href="{{ url_for('fertilizer_recommendation') }}">Discover Here</a>
+                </div>    
+            </div>
+        </div>
+    </div>
+    <div class="pimg2">
+        <div class="text-box1">
+            <span class="text1">Transform Your Farming with Disease Detection Technology</span>
+            <p class="text2">Early detection for healthier, more prolific crops. </p>
+            <div class="button">
+                <a style="background-color: #BC6C25;" href="{{ url_for('disease_prediction') }}">Detect Here</a>
+            </div> 
+        </div>       
+    </div>
+
+        </body>
+        </html>

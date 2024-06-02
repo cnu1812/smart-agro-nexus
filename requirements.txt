@@ -1,0 +1,11 @@
+Flask==2.0.1
+numpy==1.20.3
+pandas==1.2.4
+requests==2.25.1
+torch==1.8.1
+torchvision==0.9.1
+Pillow==8.2.0
+web3==5.21.0
+solcx==0.6.0
+eth-utils==1.10.0
+markupsafe==2.0.1
