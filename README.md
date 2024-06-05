@@ -24,7 +24,7 @@ Smart Agro Nexus is an innovative application designed to provide intelligent ag
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/smart-agro-nexus.git
+    git clone https://github.com/Sai-indupuri/smart-agro-nexus.git
     cd smart-agro-nexus
     ```
 
