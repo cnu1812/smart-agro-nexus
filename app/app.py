@@ -15,7 +15,11 @@ from torchvision import transforms
 from PIL import Image
 from utils.model import ResNet9
 from web3 import Web3, HTTPProvider
-from solcx import compile_standard
+
+#import solcx
+
+#solcx.install_solc("0.6.0")
+#from solcx import compile_standard
 import json
 from eth_utils import to_hex
 # ==============================================================================================
@@ -24,10 +28,10 @@ from eth_utils import to_hex
 web3 = Web3(HTTPProvider("HTTP://127.0.0.1:7545"))  # Update with your Ethereum node URL
 
 # Load Contract ABI and Address
-contract_address = "Your Contract Address"
+contract_address = "0x03ab458634910AaD20eF5f1C8ee96F1D6ac54919"
 
 # Load contract ABI from JSON file
-with open('build\contracts\SupplyChain.json') as f:
+with open('../build/contracts/SupplyChain.json') as f:
     contract_data = json.load(f)
     abi = contract_data['abi']
 
@@ -78,7 +82,7 @@ disease_classes = ['Apple___Apple_scab',
                    'Tomato___Tomato_mosaic_virus',
                    'Tomato___healthy']
 
-disease_model_path = 'app\models\plant_disease_model.pth'
+disease_model_path = 'models/plant_disease_model.pth'
 disease_model = ResNet9(3, len(disease_classes))
 disease_model.load_state_dict(torch.load(
     disease_model_path, map_location=torch.device('cpu')))
@@ -87,7 +91,7 @@ disease_model.eval()
 
 # Loading crop recommendation model
 
-crop_recommendation_model_path = 'app/models/RandomForest.pkl'
+crop_recommendation_model_path = 'models/RandomForest.pkl'
 crop_recommendation_model = pickle.load(
     open(crop_recommendation_model_path, 'rb'))
 
