@@ -157,7 +157,7 @@ app = Flask(__name__)
 
 @ app.route('/')
 def home():
-    title = 'Smart Agro Nexus - Home'
+    title = 'Jai Jawan - Home'
     return render_template('index.html', title=title)
 
 # render crop recommendation form page
@@ -165,7 +165,7 @@ def home():
 
 @ app.route('/crop-recommend')
 def crop_recommend():
-    title = 'Smart Agro Nexus - Crop Recommendation'
+    title = 'Jai Jawan - Crop Recommendation'
     return render_template('crop.html', title=title)
 
 # render fertilizer recommendation form page
@@ -236,7 +236,7 @@ def fert_recommend():
     K = int(request.form['pottasium'])
     # ph = float(request.form['ph'])
 
-    df = pd.read_csv('app/Data/fertilizer.csv')
+    df = pd.read_csv('Data/fertilizer.csv')
 
     nr = df[df['Crop'] == crop_name]['N'].iloc[0]
     pr = df[df['Crop'] == crop_name]['P'].iloc[0]

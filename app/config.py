@@ -1,1 +1,6 @@
-weather_api_key = "Your_Api_key"
+from dotenv import load_dotenv
+import os
+
+load_dotenv() 
+
+weather_api_key = os.getenv("weather_api_key")
